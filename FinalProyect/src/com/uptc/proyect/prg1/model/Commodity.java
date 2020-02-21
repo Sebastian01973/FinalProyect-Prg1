@@ -6,15 +6,13 @@ package com.uptc.proyect.prg1.model;
  * @author Sebastian Martinez
  * @date 19/02/2020
  */
-public class TheProduct {
+public class Commodity {
 
 	private Product product; // Producto
-	private float value; // valor
 	private int units; // unidades
 	
-	public TheProduct(Product product, float value, int units) {
+	public Commodity(Product product, int units) {
 		this.product = product;
-		this.value = value;
 		this.units = units;
 	}
 
@@ -26,13 +24,6 @@ public class TheProduct {
 		return product;
 	}
 
-	/**
-	 * @description Este es el getter de value
-	 * @return the value
-	 */
-	public float getValue() {
-		return value;
-	}
 
 	/**
 	 * @description Este es el getter de units

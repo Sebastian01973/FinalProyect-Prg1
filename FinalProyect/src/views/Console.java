@@ -1,5 +1,7 @@
 package views;
 
+import com.sun.org.apache.xml.internal.security.keys.content.RetrievalMethod;
+
 import utilits.ViewUtilits;
 
 /**
@@ -32,6 +34,11 @@ public class Console {
 	public String readString(String message) {
 		System.out.println(message);
 		return imput.readString();
+	}
+	
+	public byte readByte(String message) {
+		System.out.println(message);
+		return imput.readByte();
 	}
 	
 	/**

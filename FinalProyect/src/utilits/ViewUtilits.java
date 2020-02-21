@@ -114,4 +114,26 @@ public class ViewUtilits {
 		return (line.length() == 1) ? line.matches("^[s|N|S|n]{1}$"):false;
 	}
 	
+	/**
+	 * @descrption Este metodo nos dice si esta bien un nombre o no.
+	 * @param name
+	 * @return
+	 */
+	public boolean isValidateName(String name) {
+		return name.matches("^([A-Z]{1}[a-z]+[ ]?){2}$");
+	}
+	
+	/**
+	 * @descrption Este metodo nos dice si esta bien una edad
+	 * @param line la edad
+	 * @return true si cumple o false si no
+	 */
+	public boolean isValidateAge(String line) {
+		return line.matches("^[0-128]*$");
+	}
+	
+	public boolean isValidatePasswordAndNick(String line) {
+		return line.matches("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{8,16}$");
+	}
+	
 }

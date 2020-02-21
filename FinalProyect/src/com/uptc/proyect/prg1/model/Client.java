@@ -1,5 +1,7 @@
 package com.uptc.proyect.prg1.model;
 
+import java.util.HashSet;
+
 /**
  * @descrption Este clase es la de un cliente 
  * @author Sebastian Martinez
@@ -8,11 +10,12 @@ package com.uptc.proyect.prg1.model;
 public class Client extends Person{
 
 	private String password; // Contraseña
-
+	
 	public Client(String name, byte age, String identificator, String password) {
 		super(name, age, identificator);
 		this.password = password;
 	}
+	
 
 	/**
 	 * description Este metodo nos devuelve la contraseña

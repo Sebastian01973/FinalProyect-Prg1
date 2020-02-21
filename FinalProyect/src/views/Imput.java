@@ -36,11 +36,11 @@ public class Imput {
 	}
 	
 	/**
-	 * @descrption Este metodo nos recibe un dato int
-	 * @return el dato int que digitaron
+	 * @descrption Este metodo nos recibe un dato byte
+	 * @return el dato byte que digitaron
 	 */
-	public int readInt() {
-		return Integer.parseInt(scanner.nextLine());
+	public Byte readByte() {
+		return Byte.parseByte(scanner.nextLine());
 	}
 	
 	/**

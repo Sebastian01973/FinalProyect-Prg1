@@ -1,6 +1,9 @@
 package presenters;
 
 
+import com.uptc.proyect.prg1.model.SuperMarket;
+
+import utilits.ViewUtilits;
 import views.Console;
 import views.Imput;
 import views.MenuMain;
@@ -10,9 +13,11 @@ import views.Splash;
 public class Presenter {
 
 	private Console console;
+	private SuperMarket superMarket;
 	
 	public Presenter() {
 		console = new Console(new Imput());
+		superMarket = new SuperMarket();
 		run();
 	}
 	
@@ -43,10 +48,19 @@ public class Presenter {
 	}
 	
 	public void addClient() {
-		
-	}
-	
-	public static void main(String[] args) {
-		new Presenter();
+		boolean newClient;
+		do {
+			newClient = console.readBoolean(Message.QUESTION_OF_REGISTER_CLIENT);
+			if (newClient) {
+				String name;
+				do {
+					name = console.getImput().readString();
+					if (!(new ViewUtilits().isValidateName(name))) {
+						this.console.showMessageError("Nombre incorrecto");
+					}
+				} while (!(new ViewUtilits().isValidateName(name)));
+				superMarket.addClients(name,(byte)18,"S","Do");
+			}
+		} while (newClient);
 	}
 }

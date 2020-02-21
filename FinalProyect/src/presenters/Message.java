@@ -22,4 +22,12 @@ public class Message {
 	
 	public static final String MENU_MAIN_STRING = "Menu Principal";
 	
+	
+	// Mensajes para registrar usuario
+	
+	public static final String QUESTION_OF_REGISTER_CLIENT = "¿Desea registrarse?";
+	public static final String REGISTER_NAME = "Ingrese su nombre";
+	public static final String REGISTER_AGE = "Ingrese su edad";
+	public static final String REGISTER_NICK = "Ingrese su apodo(Con este inicia sesion)";
+	public static final String REGISTER_PASSWORD = "Ingrese su contraseña";
 }
