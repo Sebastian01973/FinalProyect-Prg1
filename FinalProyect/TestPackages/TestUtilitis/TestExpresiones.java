@@ -14,11 +14,7 @@ public class TestExpresiones {
 //		System.out.println(utilits.isValidateAge("-2"));
 //		System.out.println(utilits.isValidateAge("12"));
 //		System.out.println(utilits.isValidateAge("re"));
-		
-		System.out.println(utilits.isValidatePasswordAndNick("Sebastr02"));
-		System.out.println(utilits.isValidatePasswordAndNick("adsdfss"));
-		System.out.println(utilits.isValidatePasswordAndNick("nausan12N"));
-		System.out.println(utilits.isValidatePasswordAndNick("Felipe12d"));
+	
 		
 	}
 }

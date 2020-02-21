@@ -47,6 +47,9 @@ public class Presenter {
 		}while(true);
 	}
 	
+	/**
+	 * @description Este metodo nos agrega un cliente
+	 */
 	public void addClient() {
 		boolean newClient;
 		do {
@@ -54,12 +57,27 @@ public class Presenter {
 			if (newClient) {
 				String name;
 				do {
-					name = console.getImput().readString();
+					name = console.readString(Message.REGISTER_NAME);
 					if (!(new ViewUtilits().isValidateName(name))) {
-						this.console.showMessageError("Nombre incorrecto");
+						this.console.showMessageError(Message.ERROR_NAME_CLIENT);
 					}
 				} while (!(new ViewUtilits().isValidateName(name)));
-				superMarket.addClients(name,(byte)18,"S","Do");
+				String age;
+				do {
+					age = console.readString(Message.REGISTER_AGE);
+					if (!(new ViewUtilits().isValidateAge(age))) {
+						this.console.showMessageError(Message.ERROR_AGE_CLIENT);
+					}
+				} while (!(new ViewUtilits().isValidateAge(age)));
+				String nick;
+				do {
+					nick = console.readString(Message.REGISTER_NICK + Message.REGISTER_NICK_PLUS);
+					if (!(new ViewUtilits().isValidateNick(nick))) {
+						this.console.showMessageError(Message.ERROR_NICK_CLIENT);
+					}
+				} while (!(new ViewUtilits().isValidateNick(nick)));
+				superMarket.addClients(name,Byte.parseByte(age),nick);
+				return;
 			}
 		} while (newClient);
 	}

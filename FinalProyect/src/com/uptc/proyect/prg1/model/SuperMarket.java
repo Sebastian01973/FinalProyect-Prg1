@@ -18,8 +18,8 @@ public class SuperMarket {
 	 * @param id la identificacion
 	 * @param password la contraseña
 	 */
-	public void addClients(String name,byte age,String id,String password) {
-		buysOfClients.add(new BuyOfClient(new Client(name, age, id, password)));
+	public void addClients(String name,byte age,String id) {
+		buysOfClients.add(new BuyOfClient(new Client(name, age, id)));
 	}
 	
 	

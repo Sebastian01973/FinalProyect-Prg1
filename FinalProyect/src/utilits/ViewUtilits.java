@@ -132,7 +132,7 @@ public class ViewUtilits {
 		return line.matches("^[0-128]*$");
 	}
 	
-	public boolean isValidatePasswordAndNick(String line) {
+	public boolean isValidateNick(String line) {
 		return line.matches("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{8,16}$");
 	}
 	

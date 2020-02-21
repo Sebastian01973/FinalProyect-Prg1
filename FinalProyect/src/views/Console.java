@@ -36,11 +36,6 @@ public class Console {
 		return imput.readString();
 	}
 	
-	public byte readByte(String message) {
-		System.out.println(message);
-		return imput.readByte();
-	}
-	
 	/**
 	 * @descrption Este metood nos imprime un mensaje de error
 	 * @param message elm mensaje que se desea imprimir
