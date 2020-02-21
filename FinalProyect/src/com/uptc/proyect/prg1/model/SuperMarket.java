@@ -22,13 +22,21 @@ public class SuperMarket {
 		buysOfClients.add(new BuyOfClient(new Client(name, age, id)));
 	}
 	
-	
-	
-	public void print() {
-		for (BuyOfClient buyOfClient : buysOfClients) {
-			System.out.println(buyOfClient.getClient().name + buyOfClient.getClient().age);
-		}
+	/**
+	 * @description Este metodo nos busca un buyClient segun la posicion
+	 * @param index la poscion en la que esta
+	 * @return el buyOfClient
+	 */
+	public String getBuyOfClients(int index){
+		return buysOfClients.get(index).getClient().identificator;
 	}
 	
+	/**
+	 * @descrption Este metodo nos indica el tamaño del arrayList
+	 * @return el tamaño
+	 */
+	public int size() {
+		return buysOfClients.size();
+	}
 	
 }

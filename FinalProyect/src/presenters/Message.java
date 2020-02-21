@@ -27,9 +27,9 @@ public class Message {
 	
 	public static final String QUESTION_OF_REGISTER_CLIENT = "¿Desea registrarse?";
 	public static final String REGISTER_NAME = "Ingrese su nombre. \nEjemplo: Sebastian Martinez";
-	public static final String REGISTER_AGE = "Ingrese su edad";
+	public static final String REGISTER_AGE = "Ingrese su edad (0-128)";
 	public static final String REGISTER_NICK = "Ingrese su apodo(Con este inicia sesion). Ejem: Mico2121";
-	public static final String REGISTER_NICK_PLUS = "\n Debe contener entre 8 y 16 Caracteres,\n minimo una letra en Mayuscula y minuscula, y un numero";
+	public static final String REGISTER_NICK_PLUS = "\nDebe contener entre 8 y 16 Caracteres,\nminimo una letra en Mayuscula y minuscula, y un numero";
 	public static final String ERROR_NAME_CLIENT = "El nombre esta incorrecto";
 	public static final String ERROR_AGE_CLIENT = "La edad esta incorrecto";
 	public static final String ERROR_NICK_CLIENT = "El Nick esta incorrecto";

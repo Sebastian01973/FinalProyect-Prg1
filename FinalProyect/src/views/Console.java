@@ -1,6 +1,8 @@
 package views;
 
 import com.sun.org.apache.xml.internal.security.keys.content.RetrievalMethod;
+import com.uptc.proyect.prg1.model.BuyOfClient;
+import com.uptc.proyect.prg1.model.SuperMarket;
 
 import utilits.ViewUtilits;
 
@@ -66,6 +68,17 @@ public class Console {
 			readBoolean(message);
 		}
 		return false;
+	}
+	
+	/**
+	 * @descrption Este metodo nos muestra los clientes registrados
+	 * @param superMarket
+	 */
+	public void showListOfClient(SuperMarket superMarket) {
+		int size = superMarket.size();
+		for (int i = 0; i < size; i++) {
+			System.out.println((i+1) + superMarket.getBuyOfClients(i));
+		}
 	}
 
 }

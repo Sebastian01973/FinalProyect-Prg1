@@ -8,6 +8,5 @@ public class TestRegister {
 		SuperMarket superMarket = new SuperMarket();
 		superMarket.addClients("Sebas",(byte)12,"1002");
 		superMarket.addClients("Felipe",(byte)18,"103");
-		superMarket.print();
 	}
 }

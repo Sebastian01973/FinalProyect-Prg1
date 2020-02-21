@@ -10,18 +10,23 @@ import java.util.HashSet;
 public class Client extends Person{
 
 	
+	/**
+	 * @description Este es el contrucotr e inicializa un cliente
+	 * @param name
+	 * @param age
+	 * @param identificator
+	 */
 	public Client(String name, byte age, String identificator) {
 		super(name, age, identificator);
 	}
 	
-	
 	/**
-	 * @descrpiton Este metodo nos dice si esta bien la contraseña
-	 * @param password
+	 * @descrpiton Este metodo nos dice si esta bien el nickname
+	 * @param nickName
 	 * @return true si cumple false si no
 	 */
-	public boolean isValidatePassword(String password) {
-		return this.identificator.equals(password);
+	public boolean isValidateNickName(String nickName) {
+		return this.identificator.equals(nickName);
 	}
 	
 }

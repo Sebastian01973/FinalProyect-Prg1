@@ -37,6 +37,9 @@ public class Presenter {
 			case MessageMenu.OPTION_ONE:
 				addClient();
 				return;
+			case MessageMenu.OPTION_THREE:
+				showClients();
+				return;
 			case MessageMenu.OPTION_FIVE:
 				this.console.showMessage(Message.EXIT);
 				return;
@@ -80,5 +83,9 @@ public class Presenter {
 				return;
 			}
 		} while (newClient);
+	}
+	
+	public void showClients() {
+		console.showListOfClient(superMarket);
 	}
 }
