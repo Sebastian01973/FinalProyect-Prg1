@@ -5,6 +5,10 @@ public class BuyOfClient {
 	private Client client;
 	private GroupCommodity products;
 	
+	public BuyOfClient(GroupCommodity products) {
+		this.products = products;
+	}
+	
 	public BuyOfClient(Client client) {
 		this.client = client;
 	}

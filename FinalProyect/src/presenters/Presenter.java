@@ -58,13 +58,8 @@ public class Presenter {
 		do {
 			newClient = console.readBoolean(Message.QUESTION_OF_REGISTER_CLIENT);
 			if (newClient) {
-				String name;
-				do {
-					name = console.readString(Message.REGISTER_NAME);
-					if (!(new ViewUtilits().isValidateName(name))) {
-						this.console.showMessageError(Message.ERROR_NAME_CLIENT);
-					}
-				} while (!(new ViewUtilits().isValidateName(name)));
+				String name = "";
+				CicleDoWhile(name,(new ViewUtilits().isValidateName(name)),Message.ERROR_NAME_CLIENT,Message.REGISTER_NAME);
 				String age;
 				do {
 					age = console.readString(Message.REGISTER_AGE);
@@ -83,6 +78,22 @@ public class Presenter {
 				return;
 			}
 		} while (newClient);
+	}
+	
+	/**
+	 * @descprtion Este metodo nos valida unas condicionales
+	 * @param text
+	 * @param validate
+	 * @param message
+	 * @param messageError
+	 */
+	public void CicleDoWhile(String text,boolean validate,String messageError,String message) {
+		do {
+			text = console.readString(message);
+			if (!validate) {
+				this.console.showMessageError(messageError);
+			}
+		} while (!validate);
 	}
 	
 	public void showClients() {

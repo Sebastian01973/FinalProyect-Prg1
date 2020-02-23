@@ -1,6 +1,7 @@
 package com.uptc.proyect.prg1.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class SuperMarket {
 

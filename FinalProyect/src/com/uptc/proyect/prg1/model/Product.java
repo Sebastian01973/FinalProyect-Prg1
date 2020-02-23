@@ -3,8 +3,12 @@ package com.uptc.proyect.prg1.model;
 public class Product {
 
 	private String name; // Name
-	private TypeOfProduct type; // tipo
+	private char type;
 	private String code; // codigo
+	
+	public Product() {
+		
+	}
 	
 	/**
 	 * @descrption Este es el contrucotr e inicializa las variables
@@ -12,7 +16,7 @@ public class Product {
 	 * @param type
 	 * @param code
 	 */
-	public Product(String name, TypeOfProduct type, String code) {
+	public Product(String name, char type, String code) {
 		this.name = name;
 		this.type = type;
 		this.code = code;
@@ -30,7 +34,7 @@ public class Product {
 	 * @description Este es el getter de type
 	 * @return the type
 	 */
-	public TypeOfProduct getType() {
+	public char getType() {
 		return type;
 	}
 
